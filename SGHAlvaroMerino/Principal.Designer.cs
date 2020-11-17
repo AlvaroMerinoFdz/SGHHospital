@@ -47,9 +47,9 @@
             System.Windows.Forms.Label fechaLabel;
             System.Windows.Forms.Label medicoLabel;
             System.Windows.Forms.Label especialidadLabel3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             System.Windows.Forms.Label especialidadLabel;
             System.Windows.Forms.Label nombreLabel3;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.pnlDatosHospital = new System.Windows.Forms.Panel();
             this.lblCIF = new System.Windows.Forms.Label();
             this.lblTlfno = new System.Windows.Forms.Label();
@@ -57,9 +57,14 @@
             this.lblHospital = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbPaciente = new System.Windows.Forms.ComboBox();
+            this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitalDataSet = new SGHAlvaroMerino.hospitalDataSet();
             this.btnAñadirCita = new System.Windows.Forms.Button();
             this.cmbEspecialidades = new System.Windows.Forms.ComboBox();
+            this.especialidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbMedico = new System.Windows.Forms.ComboBox();
+            this.atencsmedicasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.idatencLabel1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -70,6 +75,8 @@
             this.btnHistorial = new System.Windows.Forms.Button();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
             this.pnlMedico = new System.Windows.Forms.Panel();
+            this.especialidadTextBox = new System.Windows.Forms.TextBox();
+            this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnGestionMedicos = new System.Windows.Forms.Button();
             this.idmedicoLabel1 = new System.Windows.Forms.Label();
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
@@ -87,30 +94,23 @@
             this.adestacarTextBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.atencsmedicasDataGridView = new System.Windows.Forms.DataGridView();
-            this.idmedicoLabel3 = new System.Windows.Forms.Label();
-            this.especialidadLabel2 = new System.Windows.Forms.Label();
-            this.nombreComboBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.medicosibfk1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.especialidadTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.atencsmedicasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitalDataSet = new SGHAlvaroMerino.hospitalDataSet();
-            this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.especialidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.atencsmedicasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idmedicoLabel3 = new System.Windows.Forms.Label();
+            this.especialidadLabel2 = new System.Windows.Forms.Label();
+            this.nombreComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.medicosibfk1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medicosTableAdapter = new SGHAlvaroMerino.hospitalDataSetTableAdapters.medicosTableAdapter();
             this.tableAdapterManager = new SGHAlvaroMerino.hospitalDataSetTableAdapters.TableAdapterManager();
             this.atencsmedicasTableAdapter = new SGHAlvaroMerino.hospitalDataSetTableAdapters.atencsmedicasTableAdapter();
             this.especialidadesTableAdapter = new SGHAlvaroMerino.hospitalDataSetTableAdapters.especialidadesTableAdapter();
             this.pacientesTableAdapter = new SGHAlvaroMerino.hospitalDataSetTableAdapters.pacientesTableAdapter();
-            this.cmbPaciente = new System.Windows.Forms.ComboBox();
             nombreLabel = new System.Windows.Forms.Label();
             apellidosLabel = new System.Windows.Forms.Label();
             movilLabel = new System.Windows.Forms.Label();
@@ -134,22 +134,22 @@
             this.pnlDatosHospital.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlMedico.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicosibfk1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nombreLabel
@@ -315,6 +315,24 @@
             especialidadLabel3.TabIndex = 9;
             especialidadLabel3.Text = "especialidad:";
             // 
+            // especialidadLabel
+            // 
+            especialidadLabel.AutoSize = true;
+            especialidadLabel.Location = new System.Drawing.Point(170, 156);
+            especialidadLabel.Name = "especialidadLabel";
+            especialidadLabel.Size = new System.Drawing.Size(69, 13);
+            especialidadLabel.TabIndex = 14;
+            especialidadLabel.Text = "especialidad:";
+            // 
+            // nombreLabel3
+            // 
+            nombreLabel3.AutoSize = true;
+            nombreLabel3.Location = new System.Drawing.Point(151, 166);
+            nombreLabel3.Name = "nombreLabel3";
+            nombreLabel3.Size = new System.Drawing.Size(52, 13);
+            nombreLabel3.TabIndex = 11;
+            nombreLabel3.Text = "Paciente:";
+            // 
             // pnlDatosHospital
             // 
             this.pnlDatosHospital.BackColor = System.Drawing.Color.SandyBrown;
@@ -401,6 +419,27 @@
             this.panel1.Size = new System.Drawing.Size(471, 251);
             this.panel1.TabIndex = 5;
             // 
+            // cmbPaciente
+            // 
+            this.cmbPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "nombre", true));
+            this.cmbPaciente.Enabled = false;
+            this.cmbPaciente.FormattingEnabled = true;
+            this.cmbPaciente.Location = new System.Drawing.Point(225, 163);
+            this.cmbPaciente.Name = "cmbPaciente";
+            this.cmbPaciente.Size = new System.Drawing.Size(121, 21);
+            this.cmbPaciente.TabIndex = 12;
+            this.cmbPaciente.SelectionChangeCommitted += new System.EventHandler(this.cmbPaciente_SelectionChangeCommitted);
+            // 
+            // pacientesBindingSource
+            // 
+            this.pacientesBindingSource.DataMember = "pacientes";
+            this.pacientesBindingSource.DataSource = this.hospitalDataSet;
+            // 
+            // hospitalDataSet
+            // 
+            this.hospitalDataSet.DataSetName = "hospitalDataSet";
+            this.hospitalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnAñadirCita
             // 
             this.btnAñadirCita.Enabled = false;
@@ -422,6 +461,11 @@
             this.cmbEspecialidades.TabIndex = 10;
             this.cmbEspecialidades.SelectionChangeCommitted += new System.EventHandler(this.cmbEspecialidades_SelectionChangeCommitted);
             // 
+            // especialidadesBindingSource
+            // 
+            this.especialidadesBindingSource.DataMember = "especialidades";
+            this.especialidadesBindingSource.DataSource = this.hospitalDataSet;
+            // 
             // cmbMedico
             // 
             this.cmbMedico.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.atencsmedicasBindingSource, "medico", true));
@@ -432,6 +476,11 @@
             this.cmbMedico.Size = new System.Drawing.Size(121, 21);
             this.cmbMedico.TabIndex = 6;
             this.cmbMedico.SelectionChangeCommitted += new System.EventHandler(this.cmbMedico_SelectionChangeCommitted);
+            // 
+            // atencsmedicasBindingSource
+            // 
+            this.atencsmedicasBindingSource.DataMember = "atencsmedicas";
+            this.atencsmedicasBindingSource.DataSource = this.hospitalDataSet;
             // 
             // fechaDateTimePicker
             // 
@@ -535,6 +584,20 @@
             this.pnlMedico.Size = new System.Drawing.Size(391, 216);
             this.pnlMedico.TabIndex = 6;
             // 
+            // especialidadTextBox
+            // 
+            this.especialidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.medicosBindingSource, "especialidad", true));
+            this.especialidadTextBox.Location = new System.Drawing.Point(241, 153);
+            this.especialidadTextBox.Name = "especialidadTextBox";
+            this.especialidadTextBox.ReadOnly = true;
+            this.especialidadTextBox.Size = new System.Drawing.Size(100, 20);
+            this.especialidadTextBox.TabIndex = 15;
+            // 
+            // medicosBindingSource
+            // 
+            this.medicosBindingSource.DataMember = "medicos";
+            this.medicosBindingSource.DataSource = this.hospitalDataSet;
+            // 
             // btnGestionMedicos
             // 
             this.btnGestionMedicos.Location = new System.Drawing.Point(18, 155);
@@ -636,6 +699,7 @@
             this.idpacienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "idpaciente", true));
             this.idpacienteTextBox.Location = new System.Drawing.Point(244, 13);
             this.idpacienteTextBox.Name = "idpacienteTextBox";
+            this.idpacienteTextBox.ReadOnly = true;
             this.idpacienteTextBox.Size = new System.Drawing.Size(100, 20);
             this.idpacienteTextBox.TabIndex = 1;
             // 
@@ -644,6 +708,7 @@
             this.nombreTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "nombre", true));
             this.nombreTextBox1.Location = new System.Drawing.Point(244, 39);
             this.nombreTextBox1.Name = "nombreTextBox1";
+            this.nombreTextBox1.ReadOnly = true;
             this.nombreTextBox1.Size = new System.Drawing.Size(100, 20);
             this.nombreTextBox1.TabIndex = 3;
             // 
@@ -652,6 +717,7 @@
             this.apellidosTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "apellidos", true));
             this.apellidosTextBox1.Location = new System.Drawing.Point(244, 65);
             this.apellidosTextBox1.Name = "apellidosTextBox1";
+            this.apellidosTextBox1.ReadOnly = true;
             this.apellidosTextBox1.Size = new System.Drawing.Size(100, 20);
             this.apellidosTextBox1.TabIndex = 5;
             // 
@@ -660,6 +726,7 @@
             this.localidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "localidad", true));
             this.localidadTextBox.Location = new System.Drawing.Point(244, 91);
             this.localidadTextBox.Name = "localidadTextBox";
+            this.localidadTextBox.ReadOnly = true;
             this.localidadTextBox.Size = new System.Drawing.Size(100, 20);
             this.localidadTextBox.TabIndex = 7;
             // 
@@ -669,6 +736,7 @@
             this.alergiasTextBox.Location = new System.Drawing.Point(244, 117);
             this.alergiasTextBox.Multiline = true;
             this.alergiasTextBox.Name = "alergiasTextBox";
+            this.alergiasTextBox.ReadOnly = true;
             this.alergiasTextBox.Size = new System.Drawing.Size(100, 51);
             this.alergiasTextBox.TabIndex = 9;
             // 
@@ -678,6 +746,7 @@
             this.adestacarTextBox.Location = new System.Drawing.Point(244, 174);
             this.adestacarTextBox.Multiline = true;
             this.adestacarTextBox.Name = "adestacarTextBox";
+            this.adestacarTextBox.ReadOnly = true;
             this.adestacarTextBox.Size = new System.Drawing.Size(100, 40);
             this.adestacarTextBox.TabIndex = 11;
             // 
@@ -714,6 +783,41 @@
             this.atencsmedicasDataGridView.Name = "atencsmedicasDataGridView";
             this.atencsmedicasDataGridView.Size = new System.Drawing.Size(568, 114);
             this.atencsmedicasDataGridView.TabIndex = 16;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idatenc";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idatenc";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "fecha";
+            this.dataGridViewTextBoxColumn2.HeaderText = "fecha";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "medico";
+            this.dataGridViewTextBoxColumn3.HeaderText = "medico";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "paciente";
+            this.dataGridViewTextBoxColumn4.HeaderText = "paciente";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "diagnostico";
+            this.dataGridViewTextBoxColumn5.HeaderText = "diagnostico";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // atencsmedicasBindingSource1
+            // 
+            this.atencsmedicasBindingSource1.DataMember = "atencsmedicas";
+            this.atencsmedicasBindingSource1.DataSource = this.hospitalDataSet;
             // 
             // idmedicoLabel3
             // 
@@ -766,84 +870,6 @@
             this.medicosibfk1BindingSource.DataMember = "medicos_ibfk_1";
             this.medicosibfk1BindingSource.DataSource = this.especialidadesBindingSource;
             // 
-            // especialidadLabel
-            // 
-            especialidadLabel.AutoSize = true;
-            especialidadLabel.Location = new System.Drawing.Point(170, 156);
-            especialidadLabel.Name = "especialidadLabel";
-            especialidadLabel.Size = new System.Drawing.Size(69, 13);
-            especialidadLabel.TabIndex = 14;
-            especialidadLabel.Text = "especialidad:";
-            // 
-            // especialidadTextBox
-            // 
-            this.especialidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.medicosBindingSource, "especialidad", true));
-            this.especialidadTextBox.Location = new System.Drawing.Point(241, 153);
-            this.especialidadTextBox.Name = "especialidadTextBox";
-            this.especialidadTextBox.ReadOnly = true;
-            this.especialidadTextBox.Size = new System.Drawing.Size(100, 20);
-            this.especialidadTextBox.TabIndex = 15;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idatenc";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idatenc";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "fecha";
-            this.dataGridViewTextBoxColumn2.HeaderText = "fecha";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "medico";
-            this.dataGridViewTextBoxColumn3.HeaderText = "medico";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "paciente";
-            this.dataGridViewTextBoxColumn4.HeaderText = "paciente";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "diagnostico";
-            this.dataGridViewTextBoxColumn5.HeaderText = "diagnostico";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // atencsmedicasBindingSource1
-            // 
-            this.atencsmedicasBindingSource1.DataMember = "atencsmedicas";
-            this.atencsmedicasBindingSource1.DataSource = this.hospitalDataSet;
-            // 
-            // hospitalDataSet
-            // 
-            this.hospitalDataSet.DataSetName = "hospitalDataSet";
-            this.hospitalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // medicosBindingSource
-            // 
-            this.medicosBindingSource.DataMember = "medicos";
-            this.medicosBindingSource.DataSource = this.hospitalDataSet;
-            // 
-            // pacientesBindingSource
-            // 
-            this.pacientesBindingSource.DataMember = "pacientes";
-            this.pacientesBindingSource.DataSource = this.hospitalDataSet;
-            // 
-            // especialidadesBindingSource
-            // 
-            this.especialidadesBindingSource.DataMember = "especialidades";
-            this.especialidadesBindingSource.DataSource = this.hospitalDataSet;
-            // 
-            // atencsmedicasBindingSource
-            // 
-            this.atencsmedicasBindingSource.DataMember = "atencsmedicas";
-            this.atencsmedicasBindingSource.DataSource = this.hospitalDataSet;
-            // 
             // medicosTableAdapter
             // 
             this.medicosTableAdapter.ClearBeforeFill = true;
@@ -869,26 +895,6 @@
             // 
             this.pacientesTableAdapter.ClearBeforeFill = true;
             // 
-            // nombreLabel3
-            // 
-            nombreLabel3.AutoSize = true;
-            nombreLabel3.Location = new System.Drawing.Point(151, 166);
-            nombreLabel3.Name = "nombreLabel3";
-            nombreLabel3.Size = new System.Drawing.Size(52, 13);
-            nombreLabel3.TabIndex = 11;
-            nombreLabel3.Text = "Paciente:";
-            // 
-            // cmbPaciente
-            // 
-            this.cmbPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "nombre", true));
-            this.cmbPaciente.Enabled = false;
-            this.cmbPaciente.FormattingEnabled = true;
-            this.cmbPaciente.Location = new System.Drawing.Point(225, 163);
-            this.cmbPaciente.Name = "cmbPaciente";
-            this.cmbPaciente.Size = new System.Drawing.Size(121, 21);
-            this.cmbPaciente.TabIndex = 12;
-            this.cmbPaciente.SelectionChangeCommitted += new System.EventHandler(this.cmbPaciente_SelectionChangeCommitted);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -913,11 +919,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnlMedico.ResumeLayout(false);
             this.pnlMedico.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -925,14 +936,9 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicosibfk1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.especialidadesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atencsmedicasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
